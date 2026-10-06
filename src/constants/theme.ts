@@ -1,3 +1,4 @@
+//colors used throughout application
 export const colors = {
   background: "#FFFFFF",
   text: "#000000",
@@ -6,8 +7,10 @@ export const colors = {
   link: "#0095F6",
   like: "#ED4956",
   inputBackground: "#EFEFEF",
+  storyRing: "#D62976",
 };
 
+//spacing used throughout application
 export const spacing = {
   xs: 4,
   sm: 8,

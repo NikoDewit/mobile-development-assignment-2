@@ -4,6 +4,7 @@ import { Tabs } from "expo-router";
 
 type IconName = React.ComponentProps<typeof Ionicons>["name"];
 
+//switch tab icons when screen is focused vs unfocused
 const TAB_ICONS: Record<string, { active: IconName; inactive: IconName }> = {
   index: { active: "home", inactive: "home-outline" },
   search: { active: "search", inactive: "search-outline" },
@@ -11,6 +12,7 @@ const TAB_ICONS: Record<string, { active: IconName; inactive: IconName }> = {
   profile: { active: "person-circle", inactive: "person-circle-outline" },
 };
 
+//base layout for all screens and navbar
 export default function TabLayout() {
   return (
     <Tabs
