@@ -11,7 +11,7 @@ interface PostHeaderProps {
 export default function PostHeader({ username, avatarUrl }: PostHeaderProps) {
   return (
     <View style={styles.container}>
-      <Avatar uri={avatarUrl} size={34} hasStoryRing />
+      <Avatar uri={avatarUrl} size={34} />
       <Text style={styles.username}>{username}</Text>
       <Ionicons name="ellipsis-vertical" size={18} color={colors.text} />
     </View>

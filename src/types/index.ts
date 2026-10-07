@@ -2,7 +2,6 @@ export interface Story {
   id: string;
   username: string;
   avatarUrl: string;
-  isOwn?: boolean;
 }
 
 export interface Comment {
@@ -30,6 +29,4 @@ export interface Conversation {
   avatarUrl: string;
   lastMessage: string;
   timeAgo: string;
-  isUnread: boolean;
-  isActive: boolean;
 }

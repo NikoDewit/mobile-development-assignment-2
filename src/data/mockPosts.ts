@@ -1,21 +1,21 @@
 import { Post, Story } from "@/types";
 
+//returns a random image at specified size
 const img = (seed: string, size = 600) =>
   `https://picsum.photos/seed/${seed}/${size}/${size}`;
 
 export const mockStories: Story[] = [
-  { id: "s0", username: "your story", avatarUrl: img("me", 150), isOwn: true },
-  { id: "s1", username: "frenchie_fry", avatarUrl: img("story1", 150) },
-  { id: "s2", username: "lil_wyatt", avatarUrl: img("story2", 150) },
-  { id: "s3", username: "pia.in.a.pod", avatarUrl: img("story3", 150) },
-  { id: "s4", username: "paisley.print", avatarUrl: img("story4", 150) },
-  { id: "s5", username: "ootd_daily", avatarUrl: img("story5", 150) },
+  { id: "s0", username: "your story", avatarUrl: img("me", 150) },
+  { id: "s1", username: "Caelan_Abugan", avatarUrl: img("story1", 150) },
+  { id: "s2", username: "Daniel.Carpintero", avatarUrl: img("story2", 150) },
+  { id: "s3", username: "Doug_Dickens", avatarUrl: img("story3", 150) },
+  { id: "s4", username: "Maximum", avatarUrl: img("story4", 150) },
 ];
 
 export const mockPosts: Post[] = [
   {
     id: "1",
-    username: "ootd_everyday",
+    username: "Caelan_Abugan",
     avatarUrl: img("avatar1", 100),
     imageUrl: img("post1"),
     likes: 10547,
@@ -30,7 +30,7 @@ export const mockPosts: Post[] = [
   },
   {
     id: "2",
-    username: "frenchie_fry39",
+    username: "Daniel.Carpintero",
     avatarUrl: img("avatar2", 100),
     imageUrl: img("post2"),
     likes: 2381,
@@ -42,7 +42,7 @@ export const mockPosts: Post[] = [
   },
   {
     id: "3",
-    username: "space_lover",
+    username: "Doug_Dickens",
     avatarUrl: img("avatar3", 100),
     imageUrl: img("post3"),
     likes: 842,

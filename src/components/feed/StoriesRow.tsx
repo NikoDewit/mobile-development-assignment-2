@@ -1,8 +1,7 @@
 import Avatar from "@/components/ui/Avatar";
 import { colors, spacing } from "@/constants/theme";
 import { Story } from "@/types";
-import { Ionicons } from "@expo/vector-icons";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 interface StoryCircleProps {
   story: Story;
@@ -12,14 +11,7 @@ interface StoryCircleProps {
 function StoryCircle({ story }: StoryCircleProps) {
   return (
     <View style={styles.story}>
-      <View>
-        <Avatar uri={story.avatarUrl} size={64} hasStoryRing={!story.isOwn} />
-        {story.isOwn && (
-          <View style={styles.addBadge}>
-            <Ionicons name="add" size={14} color="#fff" />
-          </View>
-        )}
-      </View>
+      <Avatar uri={story.avatarUrl} size={64} />
       <Text style={styles.username} numberOfLines={1}>
         {story.username}
       </Text>
@@ -34,14 +26,15 @@ interface StoriesRowProps {
 export default function StoriesRow({ stories }: StoriesRowProps) {
   return (
     <View style={styles.container}>
-      <FlatList
-        data={stories}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <StoryCircle story={item} />}
+      <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.list}
-      />
+      >
+        {stories.map((story) => (
+          <StoryCircle key={story.id} story={story} />
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -55,17 +48,4 @@ const styles = StyleSheet.create({
   list: { paddingHorizontal: spacing.md, paddingVertical: spacing.md },
   story: { width: 76, alignItems: "center", marginRight: spacing.sm },
   username: { fontSize: 11, color: colors.text, marginTop: spacing.xs },
-  addBadge: {
-    position: "absolute",
-    right: 0,
-    bottom: 0,
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    backgroundColor: colors.link,
-    borderWidth: 2,
-    borderColor: colors.background,
-    alignItems: "center",
-    justifyContent: "center",
-  },
 });
