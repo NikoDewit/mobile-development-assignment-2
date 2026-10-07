@@ -7,7 +7,6 @@ export const colors = {
   link: "#0095F6",
   like: "#ED4956",
   inputBackground: "#EFEFEF",
-  storyRing: "#D62976",
 };
 
 //spacing used throughout application
