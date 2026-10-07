@@ -35,19 +35,13 @@ function HomeHeader() {
 }
 
 export default function HomeScreen() {
-  const router = useRouter();
-
   return (
     <SafeAreaView style={styles.container} edges={["top"]}>
       <HomeHeader />
       <ScrollView showsVerticalScrollIndicator={false}>
         <StoriesRow stories={mockStories} />
         {mockPosts.map((post) => (
-          <PostCard
-            key={post.id}
-            post={post}
-            onImagePress={() => router.push(`/post/${post.id}`)}
-          />
+          <PostCard key={post.id} post={post} />
         ))}
       </ScrollView>
     </SafeAreaView>

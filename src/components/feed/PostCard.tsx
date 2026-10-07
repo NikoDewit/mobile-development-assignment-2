@@ -3,7 +3,6 @@ import { Post } from "@/types";
 import { useState } from "react";
 import {
   Image,
-  Pressable,
   StyleSheet,
   Text,
   useWindowDimensions,
@@ -14,10 +13,9 @@ import PostHeader from "./PostHeader";
 
 interface PostCardProps {
   post: Post;
-  onImagePress?: () => void;
 }
 
-export default function PostCard({ post, onImagePress }: PostCardProps) {
+export default function PostCard({ post }: PostCardProps) {
   const { width } = useWindowDimensions();
   const [isLiked, setIsLiked] = useState(post.isLiked);
 
@@ -28,16 +26,14 @@ export default function PostCard({ post, onImagePress }: PostCardProps) {
     <View style={styles.container}>
       <PostHeader username={post.username} avatarUrl={post.avatarUrl} />
 
-      <Pressable onPress={onImagePress}>
-        <Image
-          source={{ uri: post.imageUrl }}
-          style={{
-            width,
-            height: width,
-            backgroundColor: colors.inputBackground,
-          }}
-        />
-      </Pressable>
+      <Image
+        source={{ uri: post.imageUrl }}
+        style={{
+          width,
+          height: width,
+          backgroundColor: colors.inputBackground,
+        }}
+      />
 
       <PostActions
         isLiked={isLiked}

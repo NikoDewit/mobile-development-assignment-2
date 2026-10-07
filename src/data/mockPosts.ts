@@ -22,8 +22,8 @@ export const mockPosts: Post[] = [
     caption: "Fresh shot on a sunny day!",
     commentCount: 12,
     comments: [
-      { id: "c1", username: "lil_wyatt838", text: "Awesome tones" },
-      { id: "c2", username: "pia.in.a.pod", text: "Gorg. Love it!" },
+      { id: "c1", username: "_NikoDewit_", text: "Beautiful!" },
+      { id: "c2", username: "Maximum", text: "Wowzers" },
     ],
     timeAgo: "1 day ago",
     isLiked: true,
@@ -36,26 +36,28 @@ export const mockPosts: Post[] = [
     likes: 2381,
     caption: "Golden hour never disappoints",
     commentCount: 5,
-    comments: [{ id: "c3", username: "paisley.print.48", text: "Beautiful!" }],
+    comments: [{ id: "c3", username: "_NikoDewit_", text: "Fire Pic!!!" }],
     timeAgo: "3 hours ago",
     isLiked: false,
   },
   {
     id: "3",
-    username: "Doug_Dickens",
+    username: "_NikoDewit_",
     avatarUrl: img("avatar3", 100),
     imageUrl: img("post3"),
     likes: 842,
     caption: "Looking up never gets old",
     commentCount: 2,
-    comments: [{ id: "c4", username: "astro.kid", text: "Incredible view" }],
+    comments: [
+      { id: "c4", username: "Caelan_Abugan", text: "Incredible view" },
+    ],
     timeAgo: "2 days ago",
     isLiked: false,
   },
 ];
 
-// Extra images for the Search grid (each one opens a post)
+// Extra images for the Search grid
 export const mockGridImages: { id: string; imageUrl: string }[] = Array.from(
   { length: 18 },
-  (_, i) => ({ id: String((i % 3) + 1), imageUrl: img(`grid${i}`, 400) }),
+  (_, i) => ({ id: String(i), imageUrl: img(`grid${i}`, 400) }),
 );

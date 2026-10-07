@@ -16,7 +16,7 @@ function MessagesHeader() {
         <Ionicons name="chevron-back" size={28} color={colors.text} />
       </Pressable>
       <View style={styles.titleRow}>
-        <Text style={styles.title}>modeandkids</Text>
+        <Text style={styles.title}>_NikoDewit_</Text>
         <Ionicons name="chevron-down" size={18} color={colors.text} />
       </View>
       <Ionicons name="add" size={32} color={colors.text} />
