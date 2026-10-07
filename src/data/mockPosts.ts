@@ -1,4 +1,4 @@
-import { Post, Story } from "@/types";
+import { GridImage, Post, Story } from "@/types";
 
 //returns a random image at specified size
 const img = (seed: string, size = 600) =>
@@ -57,7 +57,10 @@ export const mockPosts: Post[] = [
 ];
 
 // Extra images for the Search grid
-export const mockGridImages: { id: string; imageUrl: string }[] = Array.from(
+export const mockGridImages: GridImage[] = Array.from(
   { length: 18 },
-  (_, i) => ({ id: String(i), imageUrl: img(`grid${i}`, 400) }),
+  (_, i) => ({
+    id: String(i),
+    imageUrl: img(`grid${i}`, 400),
+  }),
 );

@@ -30,3 +30,8 @@ export interface Conversation {
   lastMessage: string;
   timeAgo: string;
 }
+
+export interface GridImage {
+  id: string;
+  imageUrl: string;
+}
