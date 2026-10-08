@@ -12,14 +12,16 @@ import PostActions from "./PostActions";
 import PostHeader from "./PostHeader";
 
 interface PostCardProps {
-  post: Post;
+  post: Post; //all data for this post
 }
 
 export default function PostCard({ post }: PostCardProps) {
+  //current screen width so the photo is full-width square
   const { width } = useWindowDimensions();
+  //let the user toggle isLiked value
   const [isLiked, setIsLiked] = useState(post.isLiked);
 
-  // Keep the like count in sync with the heart
+  //keep the like count in sync with the heart
   const likes = post.likes + (isLiked ? 1 : 0) - (post.isLiked ? 1 : 0);
 
   return (
@@ -46,6 +48,7 @@ export default function PostCard({ post }: PostCardProps) {
           <Text style={styles.bold}>{post.username} </Text>
           {post.caption}
         </Text>
+        {/* only show link if there are comments */}
         {post.commentCount > 0 && (
           <Text style={styles.muted}>
             View all {post.commentCount} comments

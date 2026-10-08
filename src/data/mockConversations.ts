@@ -1,8 +1,10 @@
 import { Conversation } from "@/types";
 
 //generate random profile pictures
+//same seed means same photo so it isn't changed on every reload
 const avatar = (seed: string) => `https://picsum.photos/seed/${seed}/120/120`;
 
+//Data for messages
 export const mockConversations: Conversation[] = [
   {
     id: "1",

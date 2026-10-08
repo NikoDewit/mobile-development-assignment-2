@@ -1,6 +1,7 @@
 import { GridImage, Post, Story } from "@/types";
 
 //returns a random image at specified size
+//same seed means same photo so it isn't changed on every reload
 const img = (seed: string, size = 600) =>
   `https://picsum.photos/seed/${seed}/${size}/${size}`;
 
@@ -12,6 +13,8 @@ export const mockStories: Story[] = [
   { id: "s4", username: "Maximum", avatarUrl: img("story4", 150) },
 ];
 
+//Data for posts on the Home page
+//post id:3 also used in Profile page
 export const mockPosts: Post[] = [
   {
     id: "1",

@@ -2,6 +2,8 @@ import { colors } from "@/constants/theme";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
+//type of a valid Ionicons icon name, pulled from the component's own props
+//so TypeScript catches typos in the icon names below.
 type IconName = React.ComponentProps<typeof Ionicons>["name"];
 
 //switch tab icons when screen is focused vs unfocused
@@ -12,7 +14,7 @@ const TAB_ICONS: Record<string, { active: IconName; inactive: IconName }> = {
   profile: { active: "person-circle", inactive: "person-circle-outline" },
 };
 
-//base layout for all screens and navbar
+//base layout for all pages and navbar
 export default function TabLayout() {
   return (
     <Tabs

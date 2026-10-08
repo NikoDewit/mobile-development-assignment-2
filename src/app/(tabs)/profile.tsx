@@ -4,7 +4,7 @@ import { mockPosts } from "@/data/mockPosts";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-// Same file as the screen: used once
+//same file as page: used once
 function ProfileHeader({ username }: { username: string }) {
   return (
     <View style={styles.header}>
@@ -15,6 +15,7 @@ function ProfileHeader({ username }: { username: string }) {
 }
 
 export default function ProfileScreen() {
+  //show the third mock post to match the posts screenshot
   const post = mockPosts[2];
 
   return (

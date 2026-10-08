@@ -2,8 +2,8 @@ import { colors } from "@/constants/theme";
 import { Image } from "react-native";
 
 interface AvatarProps {
-  uri: string;
-  size?: number;
+  uri: string; //network URL of the photo
+  size?: number; //optional width and height in pixels, defaults to 40
 }
 
 export default function Avatar({ uri, size = 40 }: AvatarProps) {

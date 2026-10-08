@@ -7,7 +7,7 @@ import { useRouter } from "expo-router";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-// Same file as the screen: used once
+//same file as page: used once
 function MessagesHeader() {
   const router = useRouter();
   return (
@@ -24,7 +24,7 @@ function MessagesHeader() {
   );
 }
 
-// Same file as the screen: used once
+//same file as page: used once
 function MessageTabs() {
   return (
     <View style={styles.tabRow}>
@@ -39,7 +39,7 @@ function MessageTabs() {
   );
 }
 
-// Same file as the screen: used once
+//same file as page: used once
 function CameraBar() {
   return (
     <View style={styles.cameraBar}>
@@ -58,6 +58,7 @@ export default function MessagesScreen() {
       </View>
       <MessageTabs />
 
+      {/* only the list scrolls; the header and Camera bar stay fixed */}
       <ScrollView showsVerticalScrollIndicator={false}>
         {mockConversations.map((conversation) => (
           <ConversationRow key={conversation.id} conversation={conversation} />

@@ -18,7 +18,7 @@ export default function PostActions({
   const handlePress = () => {
     onToggleLike();
 
-    // Grow quickly, then spring back to normal size
+    // Grow quickly, then go back to normal size
     Animated.sequence([
       Animated.timing(scale, {
         toValue: 1.3,

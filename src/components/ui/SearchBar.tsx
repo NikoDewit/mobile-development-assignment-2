@@ -6,9 +6,10 @@ type IconName = React.ComponentProps<typeof Ionicons>["name"];
 
 interface SearchBarProps {
   text?: string;
-  rightIcon?: IconName;
+  rightIcon?: IconName; //messages use a filter icon
 }
 
+//Static search bar with text "search" in it
 export default function SearchBar({
   text = "Search",
   rightIcon,

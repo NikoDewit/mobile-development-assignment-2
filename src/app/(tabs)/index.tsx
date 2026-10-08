@@ -7,14 +7,17 @@ import { useRouter } from "expo-router";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-// Same file as the screen: single-use
+//same file as page: used once
 function HomeHeader() {
+  //useRouter used for navigation
   const router = useRouter();
   return (
     <View style={styles.header}>
       <Text style={styles.logo}>Instagram</Text>
       <View style={styles.headerIcons}>
         <Ionicons name="heart-outline" size={26} color={colors.text} />
+
+        {/* Tapping the messenger icon pushes the Messages stack screen */}
         <Pressable
           onPress={() => router.push("/messages")}
           hitSlop={8}
@@ -36,6 +39,7 @@ function HomeHeader() {
 
 export default function HomeScreen() {
   return (
+    // edges={['top']}: the tab bar already handles the bottom edge.
     <SafeAreaView style={styles.container} edges={["top"]}>
       <HomeHeader />
       <ScrollView showsVerticalScrollIndicator={false}>

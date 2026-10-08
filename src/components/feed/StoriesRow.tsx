@@ -12,6 +12,7 @@ function StoryCircle({ story }: StoryCircleProps) {
   return (
     <View style={styles.story}>
       <Avatar uri={story.avatarUrl} size={64} />
+      {/*numberOfLines={1} cuts long usernames off with "..." so layout stays even */}
       <Text style={styles.username} numberOfLines={1}>
         {story.username}
       </Text>
@@ -20,7 +21,7 @@ function StoryCircle({ story }: StoryCircleProps) {
 }
 
 interface StoriesRowProps {
-  stories: Story[];
+  stories: Story[]; //the list to display, passed in by the Home screen
 }
 
 export default function StoriesRow({ stories }: StoriesRowProps) {
@@ -40,6 +41,7 @@ export default function StoriesRow({ stories }: StoriesRowProps) {
 }
 
 const styles = StyleSheet.create({
+  //thin lines above and below separate the row from the header and feed
   container: {
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,

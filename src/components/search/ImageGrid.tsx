@@ -3,10 +3,10 @@ import { GridImage } from "@/types";
 import { Image, StyleSheet, useWindowDimensions, View } from "react-native";
 
 interface ImageGridProps {
-  images: GridImage[];
+  images: GridImage[]; //needs at least 3 images for featured block
 }
 
-const GAP = 1;
+const GAP = 1; //thin gap between images, in pixels
 
 export default function ImageGrid({ images }: ImageGridProps) {
   const { width } = useWindowDimensions();
@@ -14,6 +14,7 @@ export default function ImageGrid({ images }: ImageGridProps) {
   const bigTile = tile * 2 + GAP;
 
   // The first three images form the featured block: two small tiles stacked next to one big one
+  //"...rest" creates normal 3 image rows below
   const [first, second, featured, ...rest] = images;
 
   return (
