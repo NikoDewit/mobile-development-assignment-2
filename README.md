@@ -184,4 +184,4 @@ The like button in `PostActions.tsx` uses React Native's `Animated` API. On pres
 
 ## Declaration of AI Usage
 
-AI was used to aid in the completion of this assignment. It was used to help me figure out how to use the network loaded photos from picsum, understand some of the coding concepts, matching the colors closely to Instagrams, and it was used to help generate this README file.
+AI was used to aid in the completion of this assignment. It was used to help me figure out how to use the network loaded photos from picsum, understand some of the coding concepts, project design decisions, matching the colors closely to Instagrams, and it was used to help generate this README file.
