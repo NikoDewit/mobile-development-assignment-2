@@ -7,7 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const TABS = ["Top", "Accounts", "Audio", "Tags", "Places"];
 
-// Same file as the screen: used once
+//same file as page: used once
 function SearchTabs() {
   return (
     <View style={styles.tabs}>
